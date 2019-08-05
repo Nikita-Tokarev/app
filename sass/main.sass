@@ -1,0 +1,628 @@
+@import "vars"
+@import "fonts"
+
+
+/*==========  GENERAL  ==========*/
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	width: 100%
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+a
+	text-decoration: none
+
+ul 
+	list-style: none
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.container
+		width: 1100px
+		margin: 0 auto
+		padding: 20px
+		position: relative
+
+
+/*==========  HEADER  ==========*/
+
+.header
+	background: $accent
+	&-container
+		display: grid
+		grid-template-columns: repeat(2, 1fr) 3fr
+		grid-template-rows: 100px
+		padding-top: 76px
+		padding-bottom: 76px
+	&-logo
+		display: flex
+		justify-content: center
+		align-items: center
+		&_white
+			color: $white
+			font-size: 26px
+			font-weight: bold
+			margin-right: 5px
+			padding: 0px 5px
+			border: 3px solid #fff200
+		&_dark
+			color: $gray
+			font-size: 26px
+			font-weight: bold
+	
+
+.nav
+	grid-column-start: 3
+	font-size: 14px
+	font-weight: bold
+	text-transform: uppercase
+	padding-top: 12px
+	&-items
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0
+		li:nth-child(7)
+			margin-top: 20px
+	&-links
+		color: $gray
+		&:hover
+			text-decoration: none
+			color: $white
+
+.site-hero
+	grid-column: 1/3
+	padding-top: 80px
+	&-title
+		color: $white
+		font-size: 21px
+		font-weight: bold
+		padding-bottom: 46px
+	&-text
+		color: $white
+		line-height: 30px
+
+.hero-slider
+	padding-top: 160px
+	grid-column: 3/4
+
+.arrow-top
+	position: absolute
+	top: 32%
+	right: 36%
+
+.we-do
+	background: $white
+	padding-bottom: 130px
+	&-headline
+		position: relative
+		padding-top: 150px
+		padding-bottom: 185px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 44%
+		left: 67%
+	&-items
+		display: grid 
+		grid-template-columns: repeat(4, 1fr)
+		grid-template-rows: repeat(3, 255px)
+		grid-gap: 180px 20px
+	&-btn
+		padding: 15px 35px
+		background: $accent
+		border-radius: 10px
+		color: $gray
+		&:hover
+			text-decoration: none
+			background: darken($accent,10%)
+			color: $white
+.web-design
+	grid-column: 3/5
+	h4
+		font-size: 18px
+		font-weight: bold
+		padding-bottom: 10px
+	p 
+		font-size: 14px
+		color: $text-small
+		padding-bottom: 14px
+	&_img
+		grid-column: 1/3
+.optimization
+	grid-column: 1/3
+	h4
+		font-size: 18px
+		font-weight: bold
+		padding-bottom: 10px
+	p 
+		font-size: 14px
+		color: $text-small
+		padding-bottom: 14px
+	&_img
+		grid-column: 3/5
+		margin-left: auto
+.marketting
+	grid-column: 3/5
+	h4
+		font-size: 18px
+		font-weight: bold
+		padding-bottom: 10px
+	p 
+		font-size: 14px
+		color: $text-small
+		padding-bottom: 14px
+	&_img
+		grid-column: 1/3
+
+.we-work
+	background-image: url(../img/bg.png)
+	padding-bottom: 110px
+	&-headline
+		position: relative
+		padding-top: 90px
+		padding-bottom: 150px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 38%
+		left: 26%
+
+.features
+	background: $white
+	&-headline
+		position: relative
+		padding-top: 90px
+		padding-bottom: 150px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 40%
+		left: 67%
+	&-wrap
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: repeat(4, 1fr)
+		grid-gap: 20px 20px
+	&-items 
+		display: grid
+		grid-template-columns: 50px 2fr
+		grid-template-rows: 50px 1fr
+		.icon
+			grid-column: 1
+			grid-row: 1/3
+			font-size: 30px
+		h4
+			font-size: 18px
+		p 
+			grid-column: 2
+			font-size: 14px
+			color: $text-small
+		&:hover
+			background: $accent
+			cursor: pointer
+			.icon
+				color: $white
+
+.packages
+	background: $white
+	padding-bottom: 130px
+	&-headline
+		position: relative
+		padding-top: 150px
+		padding-bottom: 185px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 44%
+		left: 26%
+	&-price
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		&_wrap
+			padding: 50px
+		&_btn 
+				color: $white
+				padding: 18px 52px
+				background: #a5a5a5
+				border-radius: 10px
+				&:hover
+					color: $white
+					text-decoration: none
+		&_basic 
+			display: grid
+			grid-template-rows: 100 px repeat(5, 1fr) 
+			color: #a5a5a5
+			text-align: center
+			transition: all 0.2s
+			&:hover
+				transform: scale(1.1)
+				background: $white
+				border: 3px solid $accent
+				h4 
+					border-right: none
+				p 
+					color: $text
+					border-right: none
+					font-weight: bold
+
+			h4 
+				color: #8d8d8d
+				font-size: 23px
+				padding-bottom: 50px
+				margin-bottom: 0
+				border-right: 3px solid #ffbf37
+			p 
+				border-bottom: 3px solid #ffbf37
+				border-right: 3px solid #ffbf37
+				padding:
+					top: 10px
+					bottom: 10px
+				margin-bottom: 0
+				&:nth-child(6)
+					padding-top: 30px
+					padding-bottom: 0
+					border-bottom: none
+					font-size: 25px
+					font-weight: bold
+					span 
+						font-size: 40px
+		&_standart
+			display: grid
+			grid-template-rows: 100 px repeat(5, 1fr) 
+			color: #a5a5a5
+			text-align: center
+			transition: all 0.2s
+			&:hover
+				transform: scale(1.1)
+				background: $white
+				border: 3px solid $accent
+				h4 
+					border-right: none
+				p 
+					color: $text
+					font-weight: bold
+					border-right: none
+			h4 
+				color: #f26c4f
+				font-size: 23px
+				padding-bottom: 50px
+				margin-bottom: 0
+				border-right: 3px solid #ffbf37
+			p 
+				border-bottom: 3px solid #ffbf37
+				border-right: 3px solid #ffbf37
+				padding:
+					top: 10px
+					bottom: 10px
+				margin-bottom: 0
+				&:nth-child(6)
+					color: #f26c4f
+					padding-top: 30px
+					padding-bottom: 0
+					border-bottom: none
+					font-size: 25px
+					font-weight: bold
+					span 
+						font-size: 40px
+		&_premium
+			display: grid
+			grid-template-rows: 100 px repeat(5, 1fr) 
+			color: #a5a5a5
+			text-align: center
+			transition: all 0.2s
+			&:hover
+				transform: scale(1.1)
+				background: $white
+				border: 3px solid $accent
+				p 
+					color: $text
+					font-weight: bold
+			h4 
+				color: #ffc038
+				font-size: 23px
+				padding-bottom: 50px
+				margin-bottom: 0
+			p 
+				border-bottom: 3px solid #ffbf37
+				padding:
+					top: 10px
+					bottom: 10px
+				margin-bottom: 0
+				&:nth-child(6)
+					color: #ffc038
+					padding-top: 30px
+					padding-bottom: 0
+					border-bottom: none
+					font-size: 25px
+					font-weight: bold
+					span 
+						font-size: 40px
+.btn
+	&-red
+		background: #f26c4f
+	&-yellow
+		background: #ffc038
+
+.history
+	background-image: url(../img/bg.png)
+	&-container
+		padding: 
+			bottom: 70px
+			top: 70px
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+
+	&-wrap
+		padding: 12px 25px
+		background: $white
+	&-content 
+		padding-left: 20px
+		p 
+			line-height: 30px
+			padding-bottom: 20px
+	&-headline
+		display: flex
+		align-content: center
+		padding-bottom: 25px
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 25px
+		background: $gray
+		border-radius: 5px
+	&-btn
+		padding: 20px 35px
+		font-weight: bold
+		background: $accent
+		border-radius: 3px
+		color: $gray
+		&:hover
+			text-decoration: none
+			color: $white
+			background: darken($accent,15%)
+
+.business
+	&-headline
+		position: relative
+		padding-top: 150px
+		padding-bottom: 135px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 44%
+		left: 79%
+	&-wrap
+		background-color: #f4f4f4
+		padding: 90px 100px
+	&-text
+		display: flex
+		justify-content: space-between
+		padding: 35px 110px 40px 40px
+		span
+			font-weight: bold
+			color: #6a6a6a
+	&-img
+		padding-left: 40px
+
+.team
+	&-headline
+		position: relative
+		padding-top: 115px
+		padding-bottom: 140px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 44%
+		left: 22%
+.team-members
+	background: $accent
+	&-container
+		display: flex
+		justify-content: space-around
+		padding-top: 60px
+	&-items
+		text-align: center
+		color: #f5f5f5
+		margin: 0
+		&_title 
+			color: $white
+			font-weight: bold
+			padding-top: 18px
+
+.support
+	&-container
+		padding-bottom: 150px
+	&-headline
+		position: relative
+		padding-top: 130px
+		padding-bottom: 150px
+		display: flex
+		justify-content: center
+		align-content: center
+	&-title
+		font-size: 26px
+		color: $white
+		padding: 10px 90px
+		background: $gray
+		border-radius: 10px
+	&-arrow
+		position: absolute
+		top: 44%
+		left: 71%
+	&-content 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-area: 30px
+		p 
+			line-height: 30px
+.wrap-btn
+	padding-top: 20px
+	.btn
+		padding: 20px 45px
+		border-radius: 2px
+		background: $accent
+		color: $gray
+		font-weight: bold
+		&:hover
+			text-decoration: none 
+			color: $white
+			background: darken($accent, 10%)
+.active
+	&-container
+		padding-bottom: 140px
+	&-wrap
+		background: url(../img/active.png) no-repeat
+		background-size: 100%
+		height: 450px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			height: 450px
+			width: 1060px
+			background: $accent
+			opacity: 0.5
+		&_btn
+			.btn
+				padding: 15px 45px
+				background: $white
+				color: $gray
+				font-weight: bold
+				border-radius: 3px
+				&:hover
+					text-decoration: none
+	&-footer
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 25px 30px
+		background: $accent
+		height: 95px
+		h3
+			font-size: 22px
+			font-weight: bold
+			color: $white
+			margin: 0
+			text-transform: uppercase
+		
+.footer
+	background: $text
+	height: 410px
+	&-container
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-template-rows: 1fr, 200px
+	&-wrap
+		padding-top: 40px
+		
+		h4
+			font-size: 18px
+			font-weight: bold
+			color: $white
+			padding-bottom: 30px
+		a
+			display: block
+			color: #aab2bd
+			padding-bottom: 15px
+			&:hover
+				text-decoration: none
+				color: $white
+	&-social
+		grid-column: 2/4
+		display: flex
+		justify-content: center
+		a 
+			height: 45px
+			width: 45px
+			background: $accent
+			border-radius: 2px
+			margin-right: 5px
+			text-align: center
+			padding-top: 8px
+		.icon
+			color: $white
+
+			
+
+
+				
+			
+
+
+	
+
+
+
+
+
+@import "media"
